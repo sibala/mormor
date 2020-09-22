@@ -1,0 +1,24 @@
+contact1{
+
+    grid-area: contact1;
+}
+contact2{
+
+    grid-area: contact2;
+}
+
+#Contact-main img{
+
+    width: 100%;
+    height: auto;
+
+}
+
+#Contact-main{
+    display: grid;
+    width: 90%;
+    grid-template-columns:repeat(2,fr) ;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "contact1 contact2";
+}
