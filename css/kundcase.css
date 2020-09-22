@@ -1,0 +1,12 @@
+.case-gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.case-gallery-col {
+    flex: 25%;
+    max-width: 25%;
+}
+.case-gallery-col img {
+    vertical-align: middle;
+    width: 100%;
+}
