@@ -1,18 +1,38 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/grafiskprofil.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="./javascript/hamburger.js"></script>
     <title>Document</title>
 </head>
 <body>
     <header> <!-- SAMMA PÅ ALLA SIDOR -->
         <!-- LOGO -->
-        <nav>
-            <!-- MENY -->
-        </nav>
+        
+<nav>
+    <!-- Topp Hamburgar Menu -->
+    <!-- Navigations länker -->
+    <div id="myLinks">
+     <a href="#index.html">Hem</a>
+      <a href="#services.html">Tjänster</a>
+      <a href="#portfolio.html#">Portfolio</a>
+      <a href="#about.html">Vilka är vi?</a>
+      <a href="#contact.html">Kontakt</a>
+    </div>
+</nav>
+    <!-- "javascript:void(0); gör så att sidan inte laddas om -->
+    <a href="javascript:void(0);"><span class="hamburger" onclick="myFunction()">
+    </span></a>
+
+    <!-- MENY -->
+        
     </header>
+    <div class="contentpusher"></div><!-- pushar ner innehållet nedanför headern -->
     <main>
         <!-- DIN SIDKOD -->
     </main>
@@ -21,3 +41,4 @@
     </footer>
 </body>
 </html>
+
