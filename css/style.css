@@ -1,0 +1,13 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    height: 72px;
+    width: 100%;
+    background-color: #2E3237;
+}
+.contentpusher {
+    width: 100%;
+    height: 72px;
+}
