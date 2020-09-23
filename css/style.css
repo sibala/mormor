@@ -35,9 +35,10 @@ nav {
     color: white;
     text-decoration: none;
     font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
     display: block;
-    height: 70px;
     padding: 25px;
+    margin: 10px auto;
   }
   
   /* Lägg till bakgrunds-färg (on mouse-hover) */
@@ -45,6 +46,7 @@ nav {
     background-color: #ddd;
     color: black;
   }
+  
   .hamburger /* Styla hamburgaren*/ {
     display: block;
     position: fixed;
