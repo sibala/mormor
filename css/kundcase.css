@@ -7,11 +7,22 @@ main * {
     padding: 0.6vw 0.6vw;
 }
 .case-gallery-container img {
-    vertical-align: middle;
     flex: 25%;
     max-width: 25%;
     padding: 0.6vw;
     width: 100%;
+    filter: grayscale(100%);
+}
+@keyframes casecard {
+    100%    {   transform: scale(1.01);
+                filter: grayscale(0%);
+                box-shadow: 2px 2px 6px #2E3237;    
+            }
+}
+.case-gallery-container img:hover {
+    animation-name: casecard;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
 }
 @media screen and (min-width: 960px) and (max-width: 1300px) {
     .case-gallery-container img {
