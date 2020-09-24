@@ -1,11 +1,18 @@
 main * {
     box-sizing: border-box;
 }
+@keyframes loadeffect {
+    0%      {filter: opacity(0%);}
+    100%    {filter: opacity(100%)}
+}
 .case-gallery-container {
     display: flex;
     width: 100vw;
     flex-wrap: wrap;
     padding: 0.6vw 0.6vw;
+    animation-name: loadeffect;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 .cases {
     flex: 25%;
@@ -21,6 +28,7 @@ main * {
 }
 .cases img {
     width: 100%;
+    border: 1px solid var(--lightcolor);
     border-radius: 2%;
 }
 .casetext {
@@ -38,12 +46,19 @@ main * {
     100%    {   z-index: 2;
                 transform: scale(1.01);
                 background-color: var(--accentcolor);
-                box-shadow: 2px 2px 6px var(--darkcolor);
-                filter: grayscale(0%) blur(0px) opacity(100%);    
+                box-shadow: 2px 2px 6px var(--darkcolor);   
             }
 }
-.cases:hover:not(.review) {
+.cases img:hover:not(.review) {
     animation-name: casecard;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+@keyframes casecarddivreset {
+    100%    {   filter: grayscale(0%) blur(0px) opacity(100%);    }
+}
+.cases:hover:not(.review) {
+    animation-name: casecarddivreset;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
