@@ -12,38 +12,59 @@ main * {
     max-width: 25%;
     height: 62.5%;
     padding: 0.6vw;
-    background-color: white;
     width: 100%;
     text-align: center;
+    border-radius: 2%;
+}
+.cases:not(.review) {
+    filter: grayscale(20%) blur(1px) opacity(70%);
 }
 .cases img {
     width: 100%;
+    border-radius: 2%;
 }
 .casetext {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    bottom: 1.6vw;
+    right: 0;
+    padding-right: 2em;
+    padding-left: 1em;
+    background-color: white;
+}
+.casetext h3 {
+    margin: 0;
 }
 @keyframes casecard {
-    100%    {   z-index: 1;
+    100%    {   z-index: 2;
                 transform: scale(1.01);
-                filter: grayscale(100%);
-                box-shadow: 2px 2px 6px var(--darkcolor);    
+                background-color: var(--accentcolor);
+                box-shadow: 2px 2px 6px var(--darkcolor);
+                filter: grayscale(0%) blur(0px) opacity(100%);    
             }
 }
-.cases:hover {
+.cases:hover:not(.review) {
     animation-name: casecard;
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
-@keyframes casecardimg {
-    100%    {   filter: blur(5px);  }
+.review {
+    height: 100%;
+    margin: auto auto;
 }
-.cases img:hover {
-    animation-name: casecardimg;
-    animation-duration: 0.2s;
-    animation-fill-mode: forwards;
+.review img:not(.whitepixel) {
+    z-index: 1;
+    margin: auto;
+    margin-right: 0.6vw;
+    width: 40%;
+    border-radius: 50%;
+}
+.review div:not(.client-underline) {
+    font-style: italic;
+    margin: auto;
+}
+.review p {
+    margin-top: 0.6vw;
+    margin-bottom: 0;
 }
 @media screen and (min-width: 960px) and (max-width: 1300px) {
     .cases {

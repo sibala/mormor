@@ -7,14 +7,28 @@
     <link rel="stylesheet" href="css/grafiskprofil.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/kundcase.css">
+    <script type="text/javascript" src="./javascript/hamburger.js"></script>
     <title>Document</title>
 </head>
 <body>
     <header> <!-- SAMMA PÅ ALLA SIDOR -->
         <!-- LOGO -->
         <nav>
-            <!-- MENY -->
+            <!-- Topp Hamburgar Menu -->
+            <!-- Navigations länker -->
+            <div id="myLinks">
+                <a href="#index.html">Hem</a>
+                <a href="#services.html">Tjänster</a>
+                <a href="#portfolio.html#">Portfolio</a>
+                <a href="#about.html">Vilka är vi?</a>
+                <a href="#contact.html">Kontakt</a>
+            </div>
         </nav>
+        <!-- "javascript:void(0); gör så att sidan inte laddas om -->
+        <a href="javascript:void(0);">
+            <span class="hamburger" onclick="myFunction()">
+            </span>
+        </a>
     </header>
     <div class="contentpusher"></div><!-- pushar ner innehållet nedanför headern -->
     <main>
@@ -40,6 +54,12 @@
                     <div class="casetext" id="text-Caava">
                     </div>
                 </div>
+                    <div class="cases review">
+                        <img src="img/clients/client1.jpg" alt="Client 1">
+                        <div>
+                            <p>"Önskar att jag hittat er tidigare,<br>hade sparat mig så mycket huvudvärk!"</p>
+                        </div>
+                    </div>
                 <div class="cases" onmouseenter="addFordLegend()" onmouseleave="removeFordLegend()">
                     <img src="img/kundcase/newlegend4x4.jpg" alt="Ford, new legend 4x4">
                     <div class="casetext" id="text-FordLegend">
@@ -65,14 +85,20 @@
                     <div class="casetext" id="text-ColemanSmith">
                     </div>
                 </div>
-                <div class="cases" onmouseenter="addGlobekit()" onmouseleave="removeGlobekit()">
-                    <img src="img/kundcase/globekit.jpg" alt="Globekit">
-                    <div class="casetext" id="text-Globekit">
+                <div class="cases review">
+                    <img src="img/clients/client2.jpg" alt="Client 2">
+                    <div>
+                        <p>"Nu har jag mer tid till barnen,<br>kanontjänst!"</p>
                     </div>
                 </div>
                 <div class="cases" onmouseenter="addFarmLeague()" onmouseleave="removeFarmLeague()">
                     <img src="img/kundcase/farmleague.jpg" alt="Farm League">
                     <div class="casetext" id="text-FarmLeague">
+                    </div>
+                </div>
+                <div class="cases" onmouseenter="addGlobekit()" onmouseleave="removeGlobekit()">
+                    <img src="img/kundcase/globekit.jpg" alt="Globekit">
+                    <div class="casetext" id="text-Globekit">
                     </div>
                 </div>
                 <div class="cases" onmouseenter="addAtHome()" onmouseleave="removeAtHome()">
