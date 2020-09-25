@@ -1,6 +1,238 @@
+h1, h2, h3, h4, h5, h6 {
+
+    margin: auto;
+
+}
+
+h2{
+
+  position: relative;
+    height: inherit;
+}
+
 #content-main{
 
 width:100%;
 
+}
 
+.contact1{
+
+    grid-area:contact1 ;
+
+}
+.contact2{
+
+    grid-area:contact2 ;
+    display: flex;
+
+}
+.contact2 img{
+
+  
+    width: 325px;
+    height: auto;
+    position: relative;
+
+}
+
+
+.hello{
+    color: var(--darkcolor);
+    grid-area:hello ;
+    width: 140px;
+    padding: 15px 32px;
+    cursor: pointer;
+    padding: inherit;
+    height: 36px;
+    position: absolute;
+    margin: auto;
+
+
+}
+
+.fa {
+  padding: 18px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px 5px;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  margin: auto;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  grid-area: fb;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+  grid-area: tw;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+  grid-area: in;
+
+}
+
+#contact-icons{
+
+width: 100%;
+height: auto;
+display: flex;
+padding-left: 0px;
+margin: 0px 50px 10px -15px;
+
+}
+#contact-grid{
+    width: 90%;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: 
+    " hello hello fb in tw . . . . . . ."
+    " contact2 contact2 contact2 contact2 contact2 contact2 contact2 contact2 contact2 contact2 contact2 contact2"
+    "contact1 contact1 . . . . . . . . . ."
+    ". . . . . . . . . . . ."
+  ;
+
+}
+
+
+
+.typewriter{
+    display: contents;
+}
+
+.typewriter h3 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .19em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 2.6s steps(40, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--accentcolor); }
+  }
+
+   .contact2 h2::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    color: var(--lightcolor);
+    height: 100%;
+    line-height: 48px;
+    top: 3em;
+    text-align: center;
+    margin: auto;
+    right: 0%;
+    left: -3%;
+    animation: abomination1 5.5s linear 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes abomination1 {
+    0% {
+      content: "T";
+    }
+    4% {
+      content: "Th";
+    }
+    8% {
+      content: "The";
+    }
+    12% {
+      content: "The ";
+    }
+    16% {
+      content: "The T";
+    }
+    20% {
+      content: "The Ty";
+    }
+    24% {
+      content: "The Typ";
+    }
+    28% {
+      content: "The Type";
+    }
+    32% {
+      content: "The Typew";
+    }
+    36% {
+      content: "The Typewr";
+    }
+    40% {
+      content: "The Typewri";
+    }
+    44% {
+      content: "The Typewrit";
+    }
+    48% {
+      content: "The Typewrite";
+    }
+    52% {
+      content: "The Typewriter";
+    }
+    56% {
+      content: "The Typewriter";
+    }
+    60% {
+      content: "The Typewriterr";
+    }
+    64% {
+      content: "The Typewriter";
+    }
+    68% {
+      content: "The Typewriter ";
+    }
+    72% {
+      content: "The Typewriter E";
+    }
+    76% {
+      content: "The Typewriter Ef";
+    }
+    80% {
+      content: "The Typewriter Efe";
+    }
+    84% {
+      content: "The Typewriter Efe";
+    }
+    88% {
+      content: "The Typewriter Eff";
+    }
+    92% {
+      content: "The Typewriter Effe";
+    }
+    96% {
+      content: "The Typewriter Effec";
+    }
+    100% {
+      content: "The Typewriter Effect";
+    }
 }
