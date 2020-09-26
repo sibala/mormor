@@ -1,35 +1,70 @@
-main * {
-    box-sizing: border-box;
+@keyframes smoothbg {
+    100%    {   background-color: var(--darkcolor);   }
+}
+body {
+    animation-name: smoothbg;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 @keyframes loadeffect {
     0%      {filter: opacity(0%);}
+    30%      {filter: opacity(0%);}
     100%    {filter: opacity(100%)}
 }
-.case-gallery-container {
-    display: flex;
-    width: 100vw;
-    flex-wrap: wrap;
-    padding: 0.6vw 0.6vw;
+main {
     animation-name: loadeffect;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
+main * {
+    box-sizing: border-box;
+}
+h1, p {
+    color: var(--lightcolor);
+}
+h1, .regular-p {
+    margin-left: calc(10vw + 0.4vw);
+    margin-right: calc(10vw + 0.4vw);
+}
+
+/* FLEXCONTAINER */
+
+.case-gallery-container {
+    display: flex;
+    width: 100vw;
+    flex-wrap: wrap;
+    /* align-content: stretch; */
+    padding: 0.2vw 10vw;
+}
+
+/* CASES, EXAMPLES OF CUSTOMERS CREATIONS */
+
 .cases {
     flex: 25%;
     max-width: 25%;
-    height: 62.5%;
-    padding: 0.6vw;
+    /* height: 62.5%; */
+    padding: 0.2vw 0.4vw;
     width: 100%;
     text-align: center;
     border-radius: 2%;
 }
+@keyframes focustounfocus {
+    100%    {filter: grayscale(20%) blur(1px) opacity(70%);}
+}
 .cases:not(.review) {
-    filter: grayscale(20%) blur(1px) opacity(70%);
+    animation-name: focustounfocus;
+    animation-delay: 0s;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
 }
 .cases img {
     width: 100%;
-    border: 1px solid var(--lightcolor);
+    border-bottom: 4px solid var(--accentcolor);
     border-radius: 2%;
+    background-color: var(--lightcolor);
+}
+.cases button, span {
+    display: none;
 }
 .casetext {
     position: absolute;
@@ -41,12 +76,17 @@ main * {
 }
 .casetext h3 {
     margin: 0;
+    background-color: white;
 }
 @keyframes casecard {
     100%    {   z-index: 2;
                 transform: scale(1.01);
-                background-color: var(--accentcolor);
-                box-shadow: 2px 2px 6px var(--darkcolor);   
+                /* background-color: var(--accentcolor); */
+                box-shadow: 0px 2px 6px var(--accentcolor);
+                padding-top: 1px;
+                padding-right: 1px;
+                padding-left: 1px;
+                border-bottom: 4px solid var(--lightcolor);   
             }
 }
 .cases img:hover:not(.review) {
@@ -62,27 +102,85 @@ main * {
     animation-duration: 0.2s;
     animation-fill-mode: forwards;
 }
+
+/* CUSTOMER REVIEWS */
+
 .review {
-    height: 100%;
-    margin: auto auto;
+    flex: 25%;
+    max-width: 25%;
+    /* height: 62.5%; */
+    padding: 0.2vw 0.4vw;
+    width: 100%;
+    text-align: center;
+    border-radius: 2%;
 }
-.review img:not(.whitepixel) {
+.whitepixel {
+    width: 100%;
+    filter: opacity(0%);
+    /* border: 1px solid var(--lightcolor); */
+    border-radius: 2%;
+    border-bottom: 4px solid var(--accentcolor);
+}
+.reviewposition {
+    position: relative;
+}
+.reviewcontent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 1;
     margin: auto;
-    margin-right: 0.6vw;
-    width: 40%;
-    border-radius: 50%;
+    width: 94%;
+    /* background-color: white; */
 }
-.review div:not(.client-underline) {
-    font-style: italic;
-    margin: auto;
+.review img:not(.whitepixel) {
+    border-radius: 50%;
+    width: 40%;
 }
 .review p {
+    font-style: italic;
     margin-top: 0.6vw;
     margin-bottom: 0;
+    /* background-color: white; */
 }
+
+/* VIEW CASE LARGE ON CLICK */
+
+.viewcase {
+    flex: 100%;
+    max-width: 100%;
+    filter: grayscale(0%) blur(0px) opacity(100%);
+/*     padding-top: 1px;
+    padding-right: 1px;
+    padding-left: 1px; */
+}
+.viewcase img {
+    width: 100%;
+    border-bottom: 4px solid var(--accentcolor);
+    border-radius: 2%;
+    border-top: 1px solid var(--lightcolor);
+    border-right: 1px solid var(--lightcolor);
+    border-left: 1px solid var(--lightcolor);
+}
+.viewcase span {
+    display: inline;
+}
+.viewcase button {
+    display: inline-block;
+    position: absolute;
+    right: 0.6vw;
+    top: 0.6vw;
+}
+
+/* RESPONSIVENESS */
+
 @media screen and (min-width: 960px) and (max-width: 1300px) {
     .cases {
+        flex: 33.3333333333%;
+        max-width: 33.3333333333%;
+    }
+    .review {
         flex: 33.3333333333%;
         max-width: 33.3333333333%;
     }
@@ -92,9 +190,17 @@ main * {
         flex: 50%;
         max-width: 50%;
     }
+    .review {
+        flex: 50%;
+        max-width: 50%;
+    }
 }
 @media screen and (max-width: 768px) {
     .cases {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .review {
         flex: 100%;
         max-width: 100%;
     }

@@ -32,77 +32,98 @@
     </header>
     <div class="contentpusher"></div><!-- pushar ner innehållet nedanför headern -->
     <main>
+        <h1>Kundcase</h1>
+        <p class="regular-p">Bli inspirerad - se vad andra skapat med vår tjänst.</p>
         <script src="javascript/kundcase-hovertext.js"></script>
+        <script src="javascript/kundcase-enlarge.js"></script>
         <div class="case-gallery-container">
                 <div class="cases" onmouseenter="addRedneckMedia()" onmouseleave="removeRedneckMedia()">
-                    <img src="img/kundcase/redneckmedia.jpg" alt="Redneck Media">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/redneckmedia.jpg" alt="Redneck Media">
                     <div class="casetext" id="text-RedneckMedia">
                     </div>
                 </div>
                 <div class="cases" onmouseenter="addAssemblyLtd()" onmouseleave="removeAssemblyLtd()">
-                    <img src="img/kundcase/assemblyltd.jpg" alt="Assembly LTD">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/assemblyltd.jpg" alt="Assembly LTD">
                     <div class="casetext" id="text-AssemblyLtd">
                     </div>
                 </div>
                 <div class="cases" onmouseenter="addPhaedis()" onmouseleave="removePhaedis()">
-                    <img src="img/kundcase/phaedis.jpg" alt="Phaedis">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/phaedis.jpg" alt="Phaedis">
                     <div class="casetext" id="text-Phaedis">
                     </div>
                 </div>
                 <div class="cases" onmouseenter="addCaava()" onmouseleave="removeCaava()">
-                    <img src="img/kundcase/caavadesign.jpg" alt="Caava Design">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/caavadesign.jpg" alt="Caava Design">
                     <div class="casetext" id="text-Caava">
                     </div>
                 </div>
-                    <div class="cases review">
-                        <img src="img/clients/client1.jpg" alt="Client 1">
-                        <div>
+                <div class="review">
+                    <div class="reviewposition">
+                        <img src="img/kundcase/whitescreenshot.jpg" alt="White pixels" class="whitepixel">
+                        <div class="reviewcontent">
+                            <img src="img/clients/client1.jpg" alt="Client 1" class="clientimg">
                             <p>"Önskar att jag hittat er tidigare,<br>hade sparat mig så mycket huvudvärk!"</p>
                         </div>
                     </div>
+                </div>
                 <div class="cases" onmouseenter="addFordLegend()" onmouseleave="removeFordLegend()">
-                    <img src="img/kundcase/newlegend4x4.jpg" alt="Ford, new legend 4x4">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/newlegend4x4.jpg" alt="Ford, new legend 4x4">
                     <div class="casetext" id="text-FordLegend">
                     </div>
                 </div>
                 <div class="cases" onmouseenter="addLittleVillageLapland()" onmouseleave="removeLittleVillageLapland()">
-                    <img src="img/kundcase/littlevillagelapland.jpg" alt="Little Village Lapland">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/littlevillagelapland.jpg" alt="Little Village Lapland">
                     <div class="casetext" id="text-LittleVillageLapland">
                     </div>
                 </div>
                 <div class="cases" onmouseenter="addDesignerTrek()" onmouseleave="removeDesignerTrek()">
-                    <img src="img/kundcase/designertrek.jpg" alt="Designer Trek">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/designertrek.jpg" alt="Designer Trek">
                     <div class="casetext" id="text-DesignerTrek">
                     </div>
                 </div>
                 <div class="cases" onmouseenter="addThomsonSafaris()" onmouseleave="removeThomsonSafaris()">
-                    <img src="img/kundcase/thomsonsafaris.com.jpg" alt="Thomson Safaris">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/thomsonsafaris.com.jpg" alt="Thomson Safaris">
                     <div class="casetext" id="text-ThomsonSafaris">
                     </div>
                 </div>
                 <div class="cases" onmouseenter="addColemanSmith()" onmouseleave="removeColemanSmith()">
-                    <img src="img/kundcase/colemansmith.jpg" alt="Coleman Smith">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/colemansmith.jpg" alt="Coleman Smith">
                     <div class="casetext" id="text-ColemanSmith">
                     </div>
                 </div>
-                <div class="cases review">
-                    <img src="img/clients/client2.jpg" alt="Client 2">
-                    <div>
-                        <p>"Nu har jag mer tid till barnen,<br>kanontjänst!"</p>
+                <div class="review">
+                    <div class="reviewposition">
+                        <img src="img/kundcase/whitescreenshot.jpg" alt="White pixels" class="whitepixel">
+                        <div class="reviewcontent">
+                            <img src="img/clients/client2.jpg" alt="Client 2">
+                            <p>"Nu har jag mer tid till barnen,<br>kanontjänst!"</p>
+                        </div>
                     </div>
                 </div>
                 <div class="cases" onmouseenter="addFarmLeague()" onmouseleave="removeFarmLeague()">
-                    <img src="img/kundcase/farmleague.jpg" alt="Farm League">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/farmleague.jpg" alt="Farm League">
                     <div class="casetext" id="text-FarmLeague">
                     </div>
                 </div>
                 <div class="cases" onmouseenter="addGlobekit()" onmouseleave="removeGlobekit()">
-                    <img src="img/kundcase/globekit.jpg" alt="Globekit">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/globekit.jpg" alt="Globekit">
                     <div class="casetext" id="text-Globekit">
                     </div>
                 </div>
                 <div class="cases" onmouseenter="addAtHome()" onmouseleave="removeAtHome()">
-                    <img src="img/kundcase/at-home.jpg" alt="At Home">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/at-home.jpg" alt="At Home">
                     <div class="casetext" id="text-AtHome">
                     </div>
                 </div>
