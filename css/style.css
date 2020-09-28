@@ -39,7 +39,6 @@ nav {
   text-align: center;
   background: #2E3237EE;
   height: 2000px;
-  margin-top: 72px;
   }
   
   /* Fixa nav meny länkarna */
@@ -62,6 +61,7 @@ nav {
   .hamburger /* Styla hamburgaren*/ {
     display: block;
     position: fixed;
+    top: 1px;
     right: 13px;
     font-size: xx-large;
     width: 1.25em;
