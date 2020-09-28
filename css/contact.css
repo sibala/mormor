@@ -305,6 +305,7 @@ ul {
 iframe{
   width:-webkit-fill-available;
   height: 448px;
+  border: 1;
   
 }
 
@@ -340,14 +341,16 @@ textarea {
 }
 
 #submit-contact {
-  background: #ff980069;
-  width: 100%;
-  border: 0;
-  height: 80px;
-  cursor: pointer;
-  margin-top: -25px;
-  font-size: x-large;
-  margin-bottom: 5px;
+  background: none;
+    width: 100%;
+    border: solid 3px orange;
+    height: 80px;
+    cursor: pointer;
+    margin-top: -25px;
+    font-size: x-large;
+    margin-bottom: 5px;
+    border-radius: 25px;
+
 }
 #submit-contact:hover, #submit-contact:focus {
   background: var(--accentcolor);
@@ -365,6 +368,7 @@ textarea {
   margin-top: -25px;
   font-size: large;
   margin-bottom: 5px;
+  border-radius: 25px;
 }
 #reset-contact:hover {
   background: var(--darkcolor);
