@@ -1,5 +1,6 @@
-body{
-    height: 400vh;
+.contentpusher {
+    width: 0;
+    height: 0;
 }
 
 .mainContainer{
@@ -10,12 +11,13 @@ body{
     grid-template-rows: 1fr 1fr 1fr 1fr; 
     grid-template-areas:
     "hero hero"
-    "sectionOne sectionOne"
-    "photoBox sectionTwo"
+    "textSection-1 textSection-1"
+    "photoBox textSection-2"
     "lowerSection lowerSection"; 
 }
 
 .hero{
+    grid-area: hero;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,7 +25,6 @@ body{
     background-position: center;
     background-size: cover;
     position: relative;
-    grid-area: hero;
 }
 
 video{
@@ -46,10 +47,9 @@ span{
     color: #FF8B3D;
 }
 
-.sectionOne{
-    grid-area: sectionOne;
+.textSection-1{
+    grid-area: textSection-1;
     padding: 20vh;
-    align-items: center;
     line-height: 4vh;
     display: grid;
     column-gap: 8vw;
@@ -60,11 +60,11 @@ span{
 }
 
 .textbox1{
-	grid-area: textbox1;
+    grid-area: textbox1;
 }
 
 .textbox2{
-	grid-area: textbox2;
+    grid-area: textbox2;
 }
 
 .textbox3{
@@ -80,67 +80,78 @@ span{
     background-repeat: no-repeat;
 }
 
-.sectionTwo{
-    grid-area: sectionTwo;
+.textSection-2{
+    grid-area: textSection-2;
     background-color: #2E3237;
     color: white;
-    padding: 25vh 20vh;
+    vertical-align: center;
+    padding: 20vh 5vw;
     line-height: 4vh;
 }
 
 .lowerSection{
     grid-area: lowerSection;
     justify-content: center;
-    
 }
 
-@media all and (max-width:960px){
+@media screen and (max-width:1024px){
+
+    .mainContainer{
+        height: 500vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-areas:
+        "hero"
+        "textSection-1"
+        "photoBox"
+        "textSection-2"
+        "lowerSection"; 
+    }
+
+    .textSection-1{    
+        padding: 10vh 12vw 5vh 12vw;
+        line-height: 3vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr; 
+        grid-template-areas:
+        "textbox1" "textbox2" "textbox3"; 
+    }
+
+    .photoBox{
+        background-size: 100%;
+        width: 100%;
+    }
+    
+    .hero h1{
+        font-size: 3vw;
+    }
+
+  
+    .textSection-2{
+        padding: 28vh 12vw 8vh 12vw;
+        line-height: 3.5vh;
+    }
+
+}
+
+@media  screen and (max-width:960px){
 
     .hero h1{
         font-size: 3vw;
     }
 
-    .sectionOne{    
-        padding: 0 4vw;
-        line-height: 3vh;
-    }
-
-
-    .sectionTwo{
-        padding: 18vh 8vw;
-        line-height: 4vh;
-    }
-
 }
 
-@media all and (max-width:768px){
-
-
-    .mainContainer{
-        height: 500vh;
-        width: 100vw;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
-        grid-template-areas:
-        "hero"
-        "sectionOne"
-        "photoBox"
-        "sectionTwo"
-        "lowerSection"; 
-    }
+@media screen and (max-width:768px){
 
     .hero h1{
         font-size: 4vw;
-        z-index: 99;
-        color: white;
     }
 
-    .sectionOne{
-        grid-area: sectionOne;
+    .textSection-1{
         padding: 10vw;
         align-items: center;
-        line-height: 5vh;
-        display: grid;
+        line-height: 3.5vh;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr; 
         grid-template-areas:
@@ -154,11 +165,35 @@ span{
         width: 100%;
     }
   
-    .sectionTwo{
-        padding: 18vh 18vw;
-        line-height: 5vh;
+    .textSection-2{
+        padding: 18vh 10vw;
+        line-height: 3.5vh;
     }
 
 }
 
+@media  screen and (max-width:375px){
 
+    .hero h1{
+        font-size: 5.5vw;
+        text-align: center;
+    }
+
+    .photoBox{
+        background-attachment: scroll;
+        background-size: cover;
+    }
+
+    .textSection-1{
+        line-height: 4vh;
+    }
+
+    .textSection-2{
+        padding: 13vh 10vw;
+        line-height: 4vh;
+    }
+
+    .mainContainer{
+        height: 650vh;
+    }
+ }
