@@ -12,7 +12,11 @@
 </head>
 <body>
     <header> <!-- SAMMA PÅ ALLA SIDOR -->
-        <!-- LOGO -->
+        <div id="header-logo-container">
+            <a href="index.html">
+                <img src="img/mormor-logo.png" alt="Mormor logotype">
+            </a>
+        </div>
         <nav>
             <!-- Topp Hamburgar Menu -->
             <!-- Navigations länker -->
@@ -32,14 +36,23 @@
     </header>
     <div class="contentpusher"></div><!-- pushar ner innehållet nedanför headern -->
     <main>
-        <section id="section-toptext">
+        <!-- <section id="section-toptext">
             <h1>Kundcase</h1>
             <p class="regular-p">Bli inspirerad - se vad andra skapat med vår tjänst.</p>
-        </section>
+        </section> -->
         <section id="section-gallery">
             <script src="javascript/kundcase-hovertext.js"></script>
             <script src="javascript/kundcase-enlarge.js"></script>
             <div class="case-gallery-container">
+                    <div class="introtext">
+                        <div class="introposition">
+                            <img src="img/kundcase/whitescreenshot.jpg" alt="White pixels" class="whitepixel">
+                            <div class="introcontent">
+                                <h1>Kundcase</h1>
+                                <p class="regular-p">Bli inspirerad - se vad andra skapat med vår tjänst.</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="cases" onmouseenter="addRedneckMedia()" onmouseleave="removeRedneckMedia()">
                         <button onclick="closeLarge()">X</button>
                         <img onclick="enlarge()" src="img/kundcase/redneckmedia.jpg" alt="Redneck Media">

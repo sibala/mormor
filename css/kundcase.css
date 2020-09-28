@@ -10,15 +10,15 @@ section {
     max-width: 100%;
 }
 h1, p {
-    color: var(--darkcolor);
+    color: var(--lightcolor);
 }
-h1, .regular-p {
+/* h1, .regular-p {
     margin-left: calc(5vw + 0.4vw);
     margin-right: calc(5vw + 0.4vw);
 }
 .regular-p {
     margin-bottom: 150px;
-}
+} */
 @keyframes smoothbg {
     100%    {   background-color: var(--darkcolor);   }
 }
@@ -46,19 +46,47 @@ h1, .regular-p {
     animation-fill-mode: forwards;
 }
 
+/* INTROTEXT */
+.introtext {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0.2vw 0.4vw;
+    width: 100%;
+    text-align: start;
+    border-radius: 2%;
+}
+.whitepixel {
+    width: 100%;
+    filter: opacity(0%);
+    border-radius: 2%;
+    border-bottom: 4px solid var(--accentcolor);
+}
+.introposition {
+    position: relative;
+}
+.introcontent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* transform: translate(-50%, -50%); */
+    z-index: 1;
+    margin: auto;
+    width: 100%;
+}
+
 /* CASES, EXAMPLES OF CUSTOMERS CREATIONS */
 
 .cases {
     flex: 25%;
     max-width: 25%;
-    padding: 0.2vw 0.4vw;
+    padding: 0.0vw 0.0vw;
     width: 100%;
     text-align: center;
     border-radius: 2%;
 }
-@keyframes focustounfocus {
+/* @keyframes focustounfocus {
     100%    {filter: grayscale(20%) blur(1px) opacity(70%);}
-}
+} */
 .cases:not(.review) {
     animation-name: focustounfocus;
     animation-delay: 0s;
@@ -67,9 +95,10 @@ h1, .regular-p {
 }
 .cases img {
     width: 100%;
-    border-bottom: 4px solid var(--accentcolor);
+    height: 100%;
+    /* border-bottom: 4px solid var(--accentcolor);
     border-radius: 2%;
-    background-color: var(--lightcolor);
+    background-color: var(--lightcolor); */
 }
 .cases button, span {
     display: none;
@@ -88,12 +117,13 @@ h1, .regular-p {
 }
 @keyframes casecard {
     100%    {   z-index: 2;
-                transform: scale(1.01);
-                box-shadow: 0px 2px 6px var(--accentcolor);
-                padding-top: 1px;
+                border: 1px solid var(--lightcolor);
+                /* transform: scale(1.01); */
+                /* box-shadow: 0px 2px 6px var(--accentcolor); */
+                /* padding-top: 1px;
                 padding-right: 1px;
                 padding-left: 1px;
-                border-bottom: 4px solid var(--lightcolor);   
+                border-bottom: 4px solid var(--lightcolor); */   
             }
 }
 .cases img:hover:not(.review) {
@@ -184,6 +214,10 @@ h1, .regular-p {
         flex: 33.3333333333%;
         max-width: 33.3333333333%;
     }
+    .introtext {
+        flex: 33.3333333333%;
+        max-width: 33.3333333333%;
+    }
 }
 @media screen and (min-width: 768px) and (max-width: 960px) {
     .cases {
@@ -194,6 +228,10 @@ h1, .regular-p {
         flex: 50%;
         max-width: 50%;
     }
+    .introtext {
+        flex: 50%;
+        max-width: 50%;
+    }
 }
 @media screen and (max-width: 768px) {
     .cases {
@@ -201,6 +239,10 @@ h1, .regular-p {
         max-width: 100%;
     }
     .review {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .introtext {
         flex: 100%;
         max-width: 100%;
     }
