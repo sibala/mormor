@@ -1,39 +1,49 @@
-@keyframes smoothbg {
-    100%    {   background-color: var(--darkcolor);   }
-}
-body {
-    animation-name: smoothbg;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-@keyframes loadeffect {
-    0%      {filter: opacity(0%);}
-    30%      {filter: opacity(0%);}
-    100%    {filter: opacity(100%)}
-}
-main {
-    animation-name: loadeffect;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
 main * {
     box-sizing: border-box;
 }
+/* main {
+    width: 100vw;
+} */
+section {
+    margin: 0 0;
+    width: 100vw;
+    max-width: 100%;
+}
 h1, p {
-    color: var(--lightcolor);
+    color: var(--darkcolor);
 }
 h1, .regular-p {
     margin-left: calc(5vw + 0.4vw);
     margin-right: calc(5vw + 0.4vw);
 }
+.regular-p {
+    margin-bottom: 150px;
+}
+@keyframes smoothbg {
+    100%    {   background-color: var(--darkcolor);   }
+}
+#section-gallery {
+    animation-name: smoothbg;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
 
 /* FLEXCONTAINER */
 
+@keyframes loadeffect {
+    0%      {filter: opacity(0%);}
+    30%     {filter: opacity(0%);}
+    100%    {filter: opacity(100%)}
+}
 .case-gallery-container {
     display: flex;
     width: 100vw;
+    max-width: 100%;
     flex-wrap: wrap;
-    padding: 0.2vw 5vw;
+    padding: 0.2vw 0;
+    animation-name: loadeffect;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
 }
 
 /* CASES, EXAMPLES OF CUSTOMERS CREATIONS */
