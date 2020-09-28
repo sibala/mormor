@@ -9,6 +9,7 @@ h2{
   position: relative;
     height: inherit;
 }
+/*
 
 .contact1{
 
@@ -44,6 +45,8 @@ h2{
 
 
 }
+
+
 
 .fa {
   padding: 18px;
@@ -95,16 +98,12 @@ margin: -7px -88px 10px 133px;
     margin: 100px auto;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(4,1fr);
+    grid-template-rows: 1fr;
     grid-template-areas: 
     " hello hello hello hello hello fb fb fb  in tw . ."
-    ". . . . . . . . . . . . "
-    ". . . . . . . . . . . ."
-    ". . . . . . . . . . . ."
   ;
 
 }
-
 
 
 .typewriter{
@@ -113,26 +112,29 @@ margin: -7px -88px 10px 133px;
 
 .typewriter h3 {
     overflow: hidden; /* Gör så att det inte syns innan animationen */
+  /*
     border-right: .19em solid var(--accentcolor); /* The typwriter cursor */
-    white-space: nowrap; /* Håller kvar på samma linje */
-    letter-spacing: .15em; /* Mellanrum mellan bokstäverna */
-    animation: 
+   /* white-space: nowrap; /* Håller kvar på samma linje */
+    /*letter-spacing: .15em; /* Mellanrum mellan bokstäverna */
+    /*animation: 
       typing 2.6s steps(40, end),
       blink-caret .75s step-end infinite;
   }
   
   /* Skriv effekt */
-  @keyframes typing {
+  /*@keyframes typing {
     from { width: 0 }
     to { width: 100% }
   }
   
   /* The typewriter cursor effect */
-  @keyframes blink-caret {
+  /*@keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: var(--accentcolor); }
   }
+  
 
+*/
    h2::after {
     position: absolute;
     content: "";
@@ -240,10 +242,9 @@ margin: -7px -88px 10px 133px;
 
 .contain {
   width: 90%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 10% auto;
   padding: 1em;
-  margin-bottom: 5%;
+  
 }
 
 
@@ -303,6 +304,8 @@ ul {
 
 iframe{
   width:-webkit-fill-available;
+  height: 448px;
+  
 }
 
 .form {
