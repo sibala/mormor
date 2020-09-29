@@ -1,53 +1,13 @@
 
-/* 
-  --lightcolor: #FFFFFF;
-    --darkcolor: #2E3237;
-    --accentcolor: #FF8B3D;
-*/
-* {
-    margin: 0;
-    padding: 0;
-   
-}
 body {
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
 }
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10000;
-    height: 72px;
-    width: 100%;
-    background-color: #2E3237EE;
+html {
+    padding: 0 !important;
+    margin: 0 !important;
 }
-.contentpusher {
-    width: 100%;
-    height: 72px;
-}
-/* #header-logo-container {
-    height: inherit;
-  }
-  #header-logo-container a {
-    text-decoration: none;
-  }
-  #header-logo-container img {
-      display: inline-block;
-      height: 48px;
-      margin: 12px;
-  } */
 
-/* #header-logo-container {
-    height: inherit;
-  }
-  #header-logo-container a {
-    text-decoration: none;
-  }
-  #header-logo-container .loga {
-      display: inline-block;
-      height: 48px;
-      margin: 12px;
-  } */
 
 /* SECTION ONE */
 .first-section {
@@ -146,21 +106,22 @@ header {
 .second-section {
     margin-top: 10px;
     background-color:  #2E3237;
-    width: 100%;
+    width:100%;
     display: flex;
     justify-content: center;
     justify-content: space-evenly;
     flex-direction: column; 
-
- 
   
+}
+hr{
+    height:100px;
 }
 .text h1 {
  
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FFFFFF;
+    color: #FF8B3D;
     font-size: 5vh;
     letter-spacing: 0.10em;
     padding: 15px 20px;
@@ -198,14 +159,16 @@ header {
     justify-content: center;
     display: flex;
     align-items: flex-start;
+    
     /* transition: transform .5s; */
   
   
 }
 
- .img1, .img3, .img4, img:hover { 
+main img:hover  { 
     transform: scale(1.2);
     } 
+  
 
 .img1 .text, .img3 .text, .img4 .text{
     width: 350px;
@@ -213,7 +176,7 @@ header {
 }
 
 
-.img1 .img3 .img4 img, img, img {
+ main img {
     width: 15%;
     height: auto;
     border-radius: 50%;
@@ -268,6 +231,10 @@ header {
      justify-content: center;
      flex-wrap: wrap;
     
+ }
+ strong {
+     font-weight: 700;
+     color: #FF8B3D;
  }
 
  .pricing_wrapper  .pricing_item{
