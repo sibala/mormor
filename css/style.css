@@ -83,3 +83,54 @@ nav {
     border-top: 0.2em solid #f9ba8c;
 }
 /* Slut på nav-menyn och knappen*/
+footer {
+  display: flex;
+  align-items: center;
+  padding: auto; /*91px 0px 150px 130px;*/
+  padding-left: 10px;
+  max-width: 100%;
+  height: 687px;
+  background-color: white;
+  justify-content: center;
+}
+
+  .vl {
+    border-left: 1px solid black;
+    height: 300px;
+  }
+
+  .copyright {
+    padding-left: 30px;
+  }
+  
+  .fa a {
+    width:60px;
+    height:60px;
+    display:block;
+    text-align:center;
+    margin: 15px 25px;
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+    text-decoration:none;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    background: linear-gradient(0deg, #ddd, #fff);
+    transition: .5s;
+  }
+  
+  .fa a:hover {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    text-decoration:none;
+  }
+  
+  .fa a .fab {
+    width: 100%;
+    height:100%;
+    display:block;
+    background: linear-gradient(0deg, #fff, #ddd);
+    border-radius: 50%;
+    line-height: calc(60px - 12px);
+    font-size:24px;
+    color: #262626;
+    transition: .5s;
+  }
