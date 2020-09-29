@@ -178,7 +178,7 @@ h1, p {
         max-width: 33.3333333333%;
     }
 }
-@media screen and (min-width: 768px) and (max-width: 960px) {
+@media screen and (min-width: 767px) and (max-width: 960px) {
     .cases {
         flex: 50%;
         max-width: 50%;
@@ -192,7 +192,7 @@ h1, p {
         max-width: 50%;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .cases {
         flex: 100%;
         max-width: 100%;
