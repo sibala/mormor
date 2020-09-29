@@ -6,7 +6,7 @@ section {
     width: 100vw;
     max-width: 100%;
 }
-h1, p {
+.introtext, .review {
     color: var(--lightcolor);
 }
 @keyframes smoothbg {
