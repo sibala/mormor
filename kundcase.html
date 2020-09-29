@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/grafiskprofil.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/kundcase.css">
+    <link rel="shortcut icon" type="image/png" href="./favicon.png">
+    <script type="text/javascript" src="./javascript/hamburger.js"></script>
+    <title>Mormor webbyrå</title>
+</head>
+<body>
+    <header> <!-- SAMMA PÅ ALLA SIDOR -->
+        <div id="header-logo-container">
+            <a href="index.html">
+                <img src="img/mormor-logo.png" alt="Mormor logotype">
+            </a>
+        </div>
+        <nav>
+            <!-- Topp Hamburgar Menu -->
+            <!-- Navigations länker -->
+            <div id="myLinks">
+                <a href="#index.html">Hem</a>
+                <a href="#services.html">Tjänster</a>
+                <a href="kundcase.html">Kundcase</a>
+                <a href="#about.html">Vilka är vi?</a>
+                <a href="#contact.html">Kontakt</a>
+            </div>
+        </nav>
+        <!-- "javascript:void(0); gör så att sidan inte laddas om -->
+        <a href="javascript:void(0);">
+            <span class="hamburger" onclick="myFunction()">
+            </span>
+        </a>
+    </header>
+    <div class="contentpusher"></div><!-- pushar ner innehållet nedanför headern -->
+    <main>
+        <section id="section-gallery">
+            <script src="javascript/kundcase-enlarge.js"></script>
+            <div class="case-gallery-container">
+                <div class="introtext">
+                    <div class="introposition">
+                        <img src="img/kundcase/whitescreenshot.jpg" height="160" alt="White pixels" class="whitepixel">
+                        <div class="introcontent">
+                            <h1>Kundcase</h1>
+                            <p class="regular-p">Bli inspirerad! <br>- Se vad andra skapat med vår tjänst.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cases">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/redneckmedia.jpg" alt="Redneck Media">
+                    <div class="casetext" id="text-RedneckMedia">
+                        <h3>Redneck Media</h3>
+                    </div>
+                </div>
+                <div class="cases">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/assemblyltd.jpg" alt="Assembly LTD">
+                    <div class="casetext" id="text-AssemblyLtd">
+                        <h3>Assembly LTD</h3>
+                    </div>
+                </div>
+                <div class="cases">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/phaedis.jpg" alt="Phaedis">
+                    <div class="casetext" id="text-Phaedis">
+                        <h3>Phaedis</h3>
+                    </div>
+                </div>
+                <div class="cases">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/caavadesign.jpg" alt="Caava Design">
+                    <div class="casetext" id="text-Caava">
+                        <h3>Caava Design</h3>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="reviewposition">
+                        <img src="img/kundcase/whitescreenshot.jpg" alt="White pixels" class="whitepixel">
+                        <div class="reviewcontent">
+                            <img src="img/clients/client1.jpg" alt="Client 1" class="clientimg">
+                            <p>"Önskar att jag hittat er tidigare,<br>hade sparat mig så mycket huvudvärk!"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cases">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/newlegend4x4.jpg" alt="Ford, new legend 4x4">
+                    <div class="casetext" id="text-FordLegend">
+                        <h3>Ford, new legend 4x4</h3>
+                    </div>
+                </div>
+                <div class="cases">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/littlevillagelapland.jpg" alt="Little Village Lapland">
+                    <div class="casetext" id="text-LittleVillageLapland">
+                        <h3>Little Village Lapland</h3>
+                    </div>
+                </div>
+                <div class="cases">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/designertrek.jpg" alt="Designer Trek">
+                    <div class="casetext" id="text-DesignerTrek">
+                        <h3>Designer Trek</h3>
+                    </div>
+                </div>
+                <div class="cases">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/thomsonsafaris.com.jpg" alt="Thomson Safaris">
+                    <div class="casetext" id="text-ThomsonSafaris">
+                        <h3>Thomson Safaris</h3>
+                    </div>
+                </div>
+                <div class="cases">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/colemansmith.jpg" alt="Coleman Smith">
+                    <div class="casetext" id="text-ColemanSmith">
+                        <h3>Coleman Smith</h3>
+                    </div>
+                </div>
+                <div class="review">
+                    <div class="reviewposition">
+                        <img src="img/kundcase/whitescreenshot.jpg" alt="White pixels" class="whitepixel">
+                        <div class="reviewcontent">
+                            <img src="img/clients/client2.jpg" alt="Client 2">
+                            <p>"Nu har jag mer tid till barnen,<br>kanontjänst!"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cases">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/farmleague.jpg" alt="Farm League">
+                    <div class="casetext" id="text-FarmLeague">
+                        <h3>Farm League</h3>
+                    </div>
+                </div>
+                <div class="cases">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/globekit.jpg" alt="Globekit">
+                    <div class="casetext" id="text-Globekit">
+                        <h3>Globekit</h3>
+                    </div>
+                </div>
+                <div class="cases">
+                    <button onclick="closeLarge()">X</button>
+                    <img onclick="enlarge()" src="img/kundcase/at-home.jpg" alt="At Home">
+                    <div class="casetext" id="text-AtHome">
+                        <h3>At Home</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer> <!-- SAMMA PÅ ALLA SIDOR -->
+        <!-- FOOTER -->
+    </footer>
+</body>
+</html>
