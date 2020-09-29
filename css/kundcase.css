@@ -1,0 +1,208 @@
+main * {
+    box-sizing: border-box;
+}
+section {
+    margin: 0 0;
+    width: 100vw;
+    max-width: 100%;
+}
+h1, p {
+    color: var(--lightcolor);
+}
+@keyframes smoothbg {
+    100%    {   background-color: var(--darkcolor);   }
+}
+#section-gallery {
+    animation-name: smoothbg;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* FLEXCONTAINER */
+
+@keyframes loadeffect {
+    0%      {filter: opacity(0%);}
+    30%     {filter: opacity(0%);}
+    100%    {filter: opacity(100%)}
+}
+.case-gallery-container {
+    display: flex;
+    width: 100vw;
+    max-width: 100%;
+    flex-wrap: wrap;
+    padding: 0vw 0;
+    animation-name: loadeffect;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+/* INTROTEXT */
+.introtext {
+    flex: 25%;
+    max-width: 25%;
+    width: 100%;
+    text-align: start;
+    border-radius: 2%;
+}
+.introposition {
+    position: relative;
+}
+.introcontent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 12px;
+    z-index: 1;
+    margin: auto;
+    width: 100%;
+}
+
+/* CASES, EXAMPLES OF CUSTOMERS CREATIONS */
+
+.cases {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0.0vw 0.0vw;
+    width: 100%;
+    text-align: center;
+    background-color: var(--accentcolor);
+}
+.cases img {
+    width: 100%;
+    height: 100%;
+}
+.cases button, span {
+    display: none;
+}
+.casetext {
+    position: relative;
+    left: 50%;
+    top: -60%;
+    transform: translateX(-50%);
+    filter: opacity(0%);
+
+}
+.casetext h3 {
+    margin: 0;
+}
+@keyframes casecard {
+    100%    {   z-index: 2;
+                filter: opacity(10%);  
+            }
+}
+.cases:hover:not(.review) img {
+    animation-name: casecard;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+.cases:hover .casetext {
+    filter: opacity(100%);
+}
+
+/* CUSTOMER REVIEWS */
+
+.review {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0.2vw 0.4vw;
+    width: 100%;
+    text-align: center;
+    border-radius: 2%;
+}
+.whitepixel {
+    width: 100%;
+    filter: opacity(0%);
+    border-radius: 2%;
+    border-bottom: 4px solid var(--accentcolor);
+}
+.reviewposition {
+    position: relative;
+}
+.reviewcontent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    margin: auto;
+    width: 94%;
+}
+.review img:not(.whitepixel) {
+    border-radius: 50%;
+    width: 40%;
+}
+.review p {
+    font-style: italic;
+    margin-top: 0.6vw;
+    margin-bottom: 0;
+}
+
+/* VIEW CASE LARGE ON CLICK */
+
+.viewcase {
+    flex: 100%;
+    max-width: 100%;
+    filter: grayscale(0%) blur(0px) opacity(100%);
+}
+.viewcase img {
+    width: 100%;
+    border-bottom: 4px solid var(--accentcolor);
+    border-radius: 2%;
+    border-top: 1px solid var(--lightcolor);
+    border-right: 1px solid var(--lightcolor);
+    border-left: 1px solid var(--lightcolor);
+}
+.viewcase span {
+    display: inline;
+}
+.viewcase button {
+    display: inline-block;
+    position: absolute;
+    right: 0.6vw;
+    top: 0.6vw;
+}
+
+/* RESPONSIVENESS */
+
+@media screen and (min-width: 960px) and (max-width: 1300px) {
+    .cases {
+        flex: 33.3333333333%;
+        max-width: 33.3333333333%;
+    }
+    .review {
+        flex: 33.3333333333%;
+        max-width: 33.3333333333%;
+    }
+    .introtext {
+        flex: 33.3333333333%;
+        max-width: 33.3333333333%;
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 960px) {
+    .cases {
+        flex: 50%;
+        max-width: 50%;
+    }
+    .review {
+        flex: 50%;
+        max-width: 50%;
+    }
+    .introtext {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .cases {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .review {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .introtext {
+        flex: 100%;
+        max-width: 100%;
+    }
+}

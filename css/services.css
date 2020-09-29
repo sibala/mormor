@@ -1,0 +1,328 @@
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+}
+html {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+/* SECTION ONE */
+.first-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #FFFFFF;
+
+  
+ 
+}
+
+/* TITLE SERVICES */
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#2E3237 ;
+    font-size: 5vh;
+    letter-spacing: 0.10em;
+    padding: 15px 20px;
+    position: relative;
+    margin-top: 80px; 
+    
+
+}
+ .title:after{
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #FF8B3D;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+ .title:hover:after {
+    width: 10%; 
+    left: 45%; 
+    
+}
+/* TEXT DESCRIPTION  */
+
+ .title-2 { 
+    margin-top: 100px;
+    font-size: 4.5vh;
+    margin-left: 50px;
+    line-height: 1.6;
+ 
+} 
+
+ /* IMAGE ONE ON THE TOP OF THE PAGE */
+
+ .image-container-fade {
+    justify-content:flex-end;
+    align-self: center;
+    margin-top: 100px; 
+    margin-right: 25px;  
+    position: relative;
+}
+
+.image-container-fade img {
+    border-radius: 0px;
+    box-shadow: none;
+    width: 100%;
+    height: auto;
+    margin: 0px;
+   
+    
+}
+/* what it does? It inject an additional content in this div */
+.image-container-fade::after {
+    display: flex;
+    content: "Mormor-Webdevelopment";
+    font-size: 2.5vw;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+}
+.image-container-fade:hover::after {
+     opacity: 0.5;
+}
+
+/* second-section Images */
+
+.second-section {
+    margin-top: 10px;
+    background-color:  #2E3237;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: column; 
+  
+}
+hr{
+    height:100px;
+}
+.text h1 {
+ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FF8B3D;
+    font-size: 5vh;
+    letter-spacing: 0.10em;
+    padding: 15px 20px;
+    position: relative; 
+
+    
+
+}
+.text h1:after{
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #FF8B3D;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.text h1:hover:after {
+    width: 40%; 
+    left: 26%; 
+ 
+    
+}
+.text p {
+    margin-top: 10px;
+    color: #FFFFFF;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.img1, .img3, .img4 {
+    justify-content: center;
+    display: flex;
+    align-items: flex-start;
+    
+    /* transition: transform .5s; */
+  
+  
+}
+
+main img:hover  { 
+    transform: scale(1.2);
+    } 
+  
+
+.img1 .text, .img3 .text, .img4 .text{
+    width: 350px;
+ 
+}
+
+
+ main img {
+    width: 15%;
+    height: auto;
+    border-radius: 50%;
+    /* box-shadow: 3px 3px 5px 2px #c27542;  */
+    margin: 50px 35px;
+    transition: transform .4s;
+  
+   
+}
+
+
+
+ /******  Pricings-Tables ***********/
+ .wrapper {
+     margin-top: 50px;
+     text-align: center;
+     line-height: 20px;
+
+ }
+ .wrapper h1 {
+    color:#2E3237 ;
+    font-size: 5vh;
+    letter-spacing: 0.10em;
+    padding: 15px 20px;
+    position: relative;
+    margin-bottom: 30px;
+   
+ 
+ }
+ .wrapper h1:after{
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #FF8B3D;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+ .wrapper h1:hover:after {
+    width: 10%; 
+    left: 45%; 
+    
+}
+ .wrapper h1 + p{
+     width: 50%;
+     margin: 20px auto 50px; /* top, left/right, botton*/
+ }
+ .pricing_wrapper { 
+     display: flex;
+     justify-content: center;
+     flex-wrap: wrap;
+    
+ }
+ strong {
+     font-weight: 700;
+     color: #FF8B3D;
+ }
+
+ .pricing_wrapper  .pricing_item{
+     width: 250px;
+     background-color: #2E3237;
+     margin: 5px 10px 50px;
+     padding: 10px 20px;
+
+
+ }
+ .pricing_wrapper  .pricing_item h3 {
+    color:#FFFFFF ;
+    font-size: 26px;
+    letter-spacing: 0.10em;
+    padding: 10px 25px;
+  
+ }
+ .pricing_wrapper  .pricing_item p.money{
+       margin: 10px 10px 20px;  
+      font-size: 40px; 
+      color: #FF8B3D;
+
+     
+  
+
+ }
+ /* .pricing_wrapper  .pricing_item p.money span {
+     font-size: 20px;
+     color:  #2d2020;
+     margin: 25px 25px 25px;
+   
+ } */
+ .pricing_item span {
+     margin-top: 10px;
+     font-size: 25px;
+     color: #FFFFFF;
+ }
+ .pricing_wrapper  .pricing_item p {
+     color:#FFFFFF ;
+     margin-top: 20px;
+   
+ }
+ .pricing_item p{
+    line-height: 1.6;
+
+ }
+ .pricing_wrapper  .pricing_item a.btn {
+     display: block;
+     margin-top: 20px;
+      background-color:  #FFFFFF;
+     color: #2E3237;
+     text-decoration: none;
+     padding: 10px;
+     border-radius: 25px;
+     border-color: #FF8B3D;
+     border-style: solid;
+     border-width: 3px 3px 3px 3px;
+    
+
+ }
+ 
+
+ a.btn {
+
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 0;
+    transition: 0.3s;
+  }
+  
+  .pricing_wrapper  .pricing_item a.btn:hover {
+    background-color: #FF8B3D;
+    color: white;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
