@@ -86,33 +86,14 @@ nav a:hover {
   border-top: 0.2em solid #f9ba8c;
 }
 
-/* ORANGE LINJE UNDER TEXT
 
-  .text h1{
-    color: black;
-  
-  }
-  .text h1:after{
-    bottom: 0;
-    content: "";
-    height: 2px;
-    left: 50%;
-    position: absolute;
-    background: #FF8B3D;
-    transition: width 0.3s ease 0s, left 0.3s ease 0s;
-    width: 0;
-  }
-  
-  .text h1:hover:after {
-    width: 10%; 
-    left: 45%; 
-  
-  }*/
+/* Min kod */
   
   main {
     padding-top: 67px;
     padding-left: 33px;
     font-family: 'montserrat', sans-serif;
+    max-width: 100%;
   }
   
   .content {
@@ -136,10 +117,9 @@ nav a:hover {
   
   .box_css {
     background-color: #2e3237;
-    width: 110%;
     height: 715px;
-    padding-top: 50px;
-    padding-left: 100px;
+    width: 100%;
+    padding: 50px 130px 0px 100px;
     margin-bottom: 0px;
     margin-left: -43px;
     font-family: monospace;
@@ -172,6 +152,7 @@ nav a:hover {
   
   .matilda {
     display: flex;
+    flex-wrap: wrap;
     width: 740px;
     align-items: center;
     justify-content: center;
@@ -191,94 +172,25 @@ nav a:hover {
       }
   
   
-  .rebecca {
+  .rebecca, .oscar, .silvia, .max {
     display: flex;
     padding: 0px 200px 0px;
     max-width: 640px;
     align-items: center;
   }
   
-      .rebecca_img {
-        margin: 15px 30px 0 0;
+      .rebecca_img, .oscar_img, .silvia_img, .max_img {
+        margin: 15px 30px 30px 0;
         width: 200px;
         object-fit: contain;
         align-self: flex-start;
       }
-  
-  
-  .max {
-    display: flex;
-    padding: 15px 200px 0px;
-    max-width: 640px;
-    align-items: center;
-  }
-  
-      .max_img {
-        margin: 15px 30px 0 0;
-        width: 200px;
-        object-fit: contain;
-        align-self: flex-start;
-      }
-  
-  
-  .silvia {
-    display: flex;
-    padding: 15px 200px 0px;
-    max-width: 640px;
-    align-items: center;
-  }
-      .silvia_img {
-        margin: 20px 30px 0 0;
-        width: 200px;
-        object-fit: contain;
-        align-self: flex-start;
-      }
-  
-  
-  
-  .oscar {
-    display: flex;
-    padding: 0px 200px 20px;
-    max-width: 640px;
-    align-items: center;
-  }
-                        
-      .oscar_img {
-        margin: 20px 30px 0 0;
-        width: 200px;
-        object-fit: contain;
-        align-self: flex-start;
-        /*border-radius: 50%;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        padding: 5px;
-        width: 150px;*/
-        
-
-      }
-  
-  
-    /*.tag-main {
-      padding-left: 30px;
-    }
-  
-    .tag-body {
-      padding-left: 15px;
-    }
-  
-    .tag-footer {
-      padding-top: 0px;
-    }
-  
-    .tag-header {
-      padding-top: 65px;
-    }*/
   
   
     footer {
       display: flex;
       align-items: center;
-      padding: auto; /*91px 0px 150px 130px;*/
+      padding: auto;
       padding-left: 10px;
       max-width: 100%;
       height: 687px;
@@ -326,63 +238,40 @@ nav a:hover {
         color: #262626;
         transition: .5s;
       }
-    
 
   
-      @media screen and (max-width: 960px){
-  
-        .oscar {
-          padding: 0px 0px 20px 100px;
-  
-        }
-        
-        .rebecca {
-          padding: 0px 0px 20px 100px;
-  
-        }
-  
-        .silvia {
-          padding: 0px 0px 20px 100px;
-  
-        }
-  
-        .max {
-          padding: 0px 0px 20px 100px;
-  
-        }
-        
-      
-      }
   
       @media screen and (max-width: 768px){
-      
-        .oscar {
-          padding: 0px 0px 20px 20px;
-  
+
+        .content {
+          margin: 10px 0px 0px 20px;
+          text-align: center;
         }
 
-        .matilda {
-          padding-top: 20px;
-          padding-left: 50px;
-          display: flex;
-          flex: 1 1 auto;
+        .matilda, .rebecca, .oscar, .silvia, .max {
+          max-width: 768px;
+          margin-left: -125px;
         }
 
-            
+      }
 
-        .rebecca {
-          padding: 0px 0px 20px 20px;
-  
+      @media screen and (max-width: 375px) {
+
+        .content {
+          margin: 10px 0px 0px 20px;
+          text-align: center;
         }
-  
-        .silvia {
-          padding: 0px 0px 20px 20px;
-  
+
+
+        .matilda, .rebecca, .oscar, .silvia, .max{
+          max-width: 375px;
+          flex-wrap: wrap;
+          margin-left: -145px;
+          padding-bottom: 50px;
         }
-  
-        .max {
-          padding: 0px 0px 20px 20px;
-  
+        
+        .rebecca_img, .oscar_img, .silvia_img, .max_img {
+          margin-bottom: -5px;
         }
-      
+
       }
