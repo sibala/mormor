@@ -5,15 +5,14 @@
 
 .mainContainer{
     display: grid;
-    height: 400vh;
+    height: 300vh;
     width: 100vw;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
     grid-template-areas:
     "hero hero"
     "textSection-1 textSection-1"
-    "photoBox textSection-2"
-    "lowerSection lowerSection"; 
+    "photoBox textSection-2"; 
 }
 
 .hero{
@@ -89,23 +88,18 @@ span{
     line-height: 4vh;
 }
 
-.lowerSection{
-    grid-area: lowerSection;
-    justify-content: center;
-}
 
 @media screen and (max-width:1024px){
 
     .mainContainer{
-        height: 500vh;
+        height: 400vh;
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr; 
         grid-template-areas:
         "hero"
         "textSection-1"
         "photoBox"
-        "textSection-2"
-        "lowerSection"; 
+        "textSection-2"; 
     }
 
     .textSection-1{    
