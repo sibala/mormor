@@ -24,6 +24,7 @@
     background-position: center;
     background-size: cover;
     position: relative;
+    height: 100vh;
 }
 
 video{
